@@ -95,5 +95,39 @@ switch (opcaoDesejada)
      Console.WriteLine($"Resultado da dividido: {divisaoA} / {divisaoB} = {divisao}");
        
        break;
+
+     //****CALCULA EXPONENCIACAO***
+
+    case "^":
     
+    double potenciaA , numeroElevado, potencia;
+
+    Console.WriteLine("Digite os valores para A e o valor que irá elevar:");
+
+    Console.Write("A :");
+    potenciaA = Convert.ToDouble(Console.ReadLine()!);
+
+    Console.Write("Número elevado:");
+    numeroElevado = Convert.ToDouble(Console.ReadLine()!);
+
+    potencia = Math.Pow(potenciaA,numeroElevado);
+
+    Console.WriteLine($"Resultado da exponênciação: {potencia} ");
+
+       break;
+    
+    //***CALCULA RADIAÇÃO***
+
+    case "√":
+
+    double valorRadiciacao, radiciacao;
+
+    Console.WriteLine("Digite o valor A:");
+    valorRadiciacao = Convert.ToDouble(Console.ReadLine()!);
+
+    radiciacao = Math.Sqrt(valorRadiciacao);
+
+    Console.WriteLine($"Resultado da radiciação: {radiciacao}");
+
+    break;
 } 
