@@ -1,11 +1,14 @@
 ﻿string opcaoDesejada;
 
-Console.WriteLine("-- Calculadora 4 operações  --\n");
+Console.WriteLine("-- Calculadora --\n");
 
 Console.WriteLine("( + )Soma");
 Console.WriteLine("( - )Substração");
 Console.WriteLine("( x )Multiplicação");
 Console.WriteLine("( / )Divisão");
+Console.WriteLine("( ^ ) Exponenciação");
+Console.WriteLine("( √ ) Radiciação");
+Console.WriteLine("( % ) Porcentagem");
 
 Console.Write("\nSelecione a opção desejada:");
 opcaoDesejada = Console.ReadLine()!;
@@ -92,8 +95,5 @@ switch (opcaoDesejada)
      Console.WriteLine($"Resultado da dividido: {divisaoA} / {divisaoB} = {divisao}");
        
        break;
-
-    default:
-        Console.WriteLine("Você selecionou uma opção inválida.");
-    break;   
-}
+    
+} 
