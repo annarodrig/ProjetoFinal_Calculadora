@@ -11,7 +11,7 @@ Console.Write("\nSelecione a opção desejada:");
 opcao = Console.ReadLine()!;
 
 
-while(opcao != "0" && opcao !="1" && opcao !="2" && opcao !="3"  && opcao !="4" && opcao !="5" && opcao !="6" && opcao !="7" && opcao !="8" && opcao !="9")
+while(opcao != "0" && opcao !="1" && opcao !="2" && opcao !="3"  && opcao !="4" && opcao !="5" && opcao !="6" && opcao !="7" && opcao !="8" && opcao !="9" && opcao !="10")
 {
     throw new ArgumentException();
 }
@@ -72,13 +72,20 @@ switch (opcao)
 
   coseno();
 
-    break;
+      break;
   //***CALCULA TANGENTE***
   case "9":
 
   tangente();
 
-  break;
+      break;
+  
+  case "10":
+
+  sobre();
+
+      break;
+
 }
 
 }
@@ -334,6 +341,19 @@ static void tangente()
 
 }
 
+static void sobre()
+{
+Console.ForegroundColor = ConsoleColor.Blue;
+Console.WriteLine("Esse programa foi criado como o projeto final do curso de Desenvolvedor C#, me chamo Anna Beatriz e atualmente estudo na instituação Etec Adolpho Berezim, no curso de técnico em informática.");
+Console.WriteLine("Neste curso encontrei a carreira que quero seguir, Desenvolvedora de Software! ");
+
+Console.ResetColor();
+  
+Console.WriteLine("\nPressione uma tecla para  retornar ao menu principal");
+Console.ReadKey();
+
+}
+
 static void Menu()
 {
 
@@ -351,6 +371,7 @@ Console.ForegroundColor = ConsoleColor.Blue;
  Console.WriteLine("( 7 ) Seno         ");
  Console.WriteLine("( 8 ) Coseno       ");
  Console.WriteLine("( 9 ) Tangente     ");
+ Console.WriteLine("( 10 ) Sobre       ");
  Console.WriteLine("( 0 ) Sair         ");
 
  Console.ResetColor();
