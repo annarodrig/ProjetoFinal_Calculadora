@@ -3,8 +3,8 @@
   <PropertyGroup>
     <OutputType>Exe</OutputType>
     <TargetFramework>net6.0</TargetFramework>
-    <ApplicationIcon>Calculadora class</Calculadora><ApplicationIcon>
-    <RootNamespace><Calculadora_2022></Calculadora_2022></RootNamespace>
+    <ApplicationIcon><Projeto_calculadora class="ico"></Projeto_calculadora><ApplicationIcon>
+    <RootNamespace><Calculadora_2022></RootNamespace>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
   </PropertyGroup>
