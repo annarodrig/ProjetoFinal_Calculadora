@@ -344,8 +344,10 @@ static void tangente()
 static void sobre()
 {
 Console.ForegroundColor = ConsoleColor.Blue;
-Console.WriteLine("Esse programa foi criado como o projeto final do curso de Desenvolvedor C#, me chamo Anna Beatriz e atualmente estudo na instituação Etec Adolpho Berezim, no curso de técnico em informática.");
+Console.WriteLine("Esse programa foi criado como o projeto final do curso de Desenvolvedor C#, me chamo Anna Beatriz, tenho 18 anos e atualmente estudo na instituação Etec Adolpho Berezim, no curso de técnico em informática.");
 Console.WriteLine("Neste curso encontrei a carreira que quero seguir, Desenvolvedora de Software! ");
+Console.WriteLine("Acesse o site do projeto pelo link: https://annarodrig.github.io/ProjetoFinal_Calculadora/");
+Console.WriteLine("Obrigado por utilizar o meu software!");
 
 Console.ResetColor();
   
