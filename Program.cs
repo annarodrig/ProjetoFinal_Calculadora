@@ -10,9 +10,10 @@ Menu();
 Console.Write("\nSelecione a opção desejada:");
 opcao = Console.ReadLine()!;
 
+
 while(opcao != "0" && opcao !="1" && opcao !="2" && opcao !="3"  && opcao !="4" && opcao !="5" && opcao !="6" && opcao !="7" && opcao !="8" && opcao !="9")
 {
-    throw new Exception();
+    throw new ArgumentException();
 }
 
 
@@ -107,12 +108,14 @@ catch (DivideByZeroException)
 {
 
   Console.ForegroundColor = ConsoleColor.Red;
-  Console.WriteLine("Formato de número inválido!");
+  Console.WriteLine("Não é possível dividir por zero!");
   Console.ResetColor();
+  Console.WriteLine("Pressione uma tecla para retornar ao menu inicial");
+  Console.ReadKey();
   Console.ReadKey();
 
 }
-catch(Exception)
+catch(ArgumentException)
 {
 
   Console.ForegroundColor = ConsoleColor.Red;
@@ -125,7 +128,7 @@ catch(Exception)
 
 while ( opcao != "0" );
 {
-  
+
   Console.ForegroundColor = ConsoleColor.Blue;
   Console.WriteLine("\nObrigado por utilizar nosso programa! :)") ;
   Console.ResetColor();
@@ -136,11 +139,11 @@ while ( opcao != "0" );
 
 static void soma()
 {
-  Console.WriteLine("Você selecionou soma");
+  Console.WriteLine("\nVocê selecionou soma");
      
   double soma, A, B;
     
-  Console.WriteLine("Digite os valores para A + B :");
+  Console.WriteLine("\nDigite os valores para A + B :");
    
   Console.Write("A =");
   A = Convert.ToDouble(Console.ReadLine()!);
@@ -150,16 +153,20 @@ static void soma()
 
   soma = A + B;
 
-  Console.WriteLine($"Resultado da soma: {A} + {B} = {soma}");
+  Console.WriteLine($"\nResultado da soma: {A} + {B} = {soma}");
+
+  Console.WriteLine("\nPressione uma tecla para  retornar ao menu principal");
+  Console.ReadKey();
+
 }
 
 static void subtracacao()
 {
 double subtracao, A, B; 
 
- Console.WriteLine("Você selecionou subtração");
+ Console.WriteLine("\nVocê selecionou subtração");
 
- Console.WriteLine("Digite os valores para A - B :");
+ Console.WriteLine("\nDigite os valores para A - B :");
  
  Console.Write("A =");
  A = Convert.ToDouble(Console.ReadLine()!);
@@ -170,15 +177,19 @@ double subtracao, A, B;
  subtracao = A - B;
  
  Console.WriteLine($"\nResultado da subtracao: {A} - {B} = {subtracao}");
+
+  Console.WriteLine("\nPressione uma tecla para  retornar ao menu principal");
+  Console.ReadKey();
+
 }
 
 static void multiplicacao()
 {
   double multiplicacao, A, B;
 
-  Console.WriteLine("Você selecionou multiplicação");
+  Console.WriteLine("\nVocê selecionou multiplicação");
 
-  Console.WriteLine("Digite os valores para A * B :");
+  Console.WriteLine("\nDigite os valores para A * B :");
   
   Console.Write("A =");
   A = Convert.ToDouble(Console.ReadLine()!);
@@ -189,15 +200,19 @@ static void multiplicacao()
   multiplicacao = A * B;
   
   Console.WriteLine($"\nResultado da multiplicação: {A} X {B} = {multiplicacao}");
+  
+  Console.WriteLine("\nPressione uma tecla para  retornar ao menu principal");
+  Console.ReadKey();
+
 }
 
 static void divisao()
 {
   double divisao, dividendo, divisor;
 
-  Console.WriteLine("Você selecionou Divisão");
+  Console.WriteLine("\nVocê selecionou Divisão");
   
-  Console.WriteLine("Digite os valores para o dividendo e o divisor:");
+  Console.WriteLine("\nDigite os valores para o dividendo e o divisor:");
   
   Console.Write("Dividendo =");
   dividendo = Convert.ToDouble(Console.ReadLine()!);
@@ -215,15 +230,19 @@ while ( divisor == 0)
  divisao = dividendo - divisor;
   
  Console.WriteLine($"\nResultado da divisão: {dividendo} / {divisor} = {divisao}");
+
+ Console.WriteLine("\nPressione uma tecla para  retornar ao menu principal");
+ Console.ReadKey();
+
 }
 
 static void exponenciacao()
 {
   double numeroBase , expoente , potencia;
   
-  Console.WriteLine("Você selecionou Exponenciação");
+  Console.WriteLine("\nVocê selecionou Exponenciação");
   
-  Console.WriteLine("Digite os valores para o expoente e a base:");
+  Console.WriteLine("\nDigite os valores para o expoente e a base:");
 
   Console.Write("A :");
   numeroBase = Convert.ToDouble(Console.ReadLine()!);
@@ -234,20 +253,28 @@ static void exponenciacao()
   potencia = Math.Pow(numeroBase,expoente);
 
   Console.WriteLine($"\nResultado da exponênciação: {potencia} ");
+
+  Console.WriteLine("\nPressione uma tecla para  retornar ao menu principal");
+  Console.ReadKey();
+
 }
 
 static void raiz()
 {
-  double valorRadiciacao, radiciacao;
+  double numero, radiciacao;
 
-  Console.WriteLine("Você selecionou Raiz Quadrada");
+  Console.WriteLine("\nVocê selecionou Raiz Quadrada");
   
   Console.Write("\nDigite um número:");
-  valorRadiciacao = Convert.ToDouble(Console.ReadLine()!);
+  numero = Convert.ToDouble(Console.ReadLine()!);
 
-  radiciacao = Math.Sqrt(valorRadiciacao);
+  radiciacao = Math.Sqrt(numero);
 
-  Console.WriteLine($"\nResultado da radiciação: {radiciacao:N2}");
+  Console.WriteLine($"\nRaiz quadrada de {numero} é: {radiciacao:N2}");
+
+  Console.WriteLine("\nPressione uma tecla para  retornar ao menu principal");
+  Console.ReadKey();
+
 }
 
 static void seno()
@@ -263,6 +290,10 @@ static void seno()
   seno = Math.Sin(valorGraus * pi / 180);
 
   Console.WriteLine($"\nO valor do seno de {valorGraus}° é: {seno:N2}");
+  
+  Console.WriteLine("\nPressione uma tecla para  retornar ao menu principal");
+  Console.ReadKey();
+
 }
 
 static void coseno()
@@ -278,6 +309,10 @@ static void coseno()
   coseno =  Math.Cos(valorGraus * pi / 180);
 
   Console.WriteLine($"\nO valor do Coseno de {valorGraus}° é: {coseno:N2}");
+  
+  Console.WriteLine("\nPressione uma tecla para  retornar ao menu principal");
+  Console.ReadKey();
+
 }
 
 static void tangente()
@@ -293,21 +328,30 @@ static void tangente()
   tangente = Math.Tan(valorGraus * pi / 180);
 
   Console.WriteLine($"\nO valor da Tangente de {valorGraus}° é: {tangente:N2}");
+  
+  Console.WriteLine("\nPressione uma tecla para  retornar ao menu principal");
+  Console.ReadKey();
+
 }
 
 static void Menu()
 {
+
+Console.BackgroundColor = ConsoleColor.White;
+Console.ForegroundColor = ConsoleColor.Blue;
+
  Console.WriteLine("=========== Calculadora ===============\n");
  
- Console.WriteLine("( 1 ) Soma");
- Console.WriteLine("( 2 ) Substração");
+ Console.WriteLine("( 1 ) Soma         ");
+ Console.WriteLine("( 2 ) Substração   ");
  Console.WriteLine("( 3 ) Multiplicação");
- Console.WriteLine("( 4 ) Divisão");
+ Console.WriteLine("( 4 ) Divisão      ");
  Console.WriteLine("( 5 ) Exponenciação");
- Console.WriteLine("( 6 ) Radiciação");
- Console.WriteLine("( 7 ) Seno");
- Console.WriteLine("( 8 ) Coseno");
- Console.WriteLine("( 9 ) Tangente");
- Console.WriteLine("( 0 ) Sair");
+ Console.WriteLine("( 6 ) Radiciação   ");
+ Console.WriteLine("( 7 ) Seno         ");
+ Console.WriteLine("( 8 ) Coseno       ");
+ Console.WriteLine("( 9 ) Tangente     ");
+ Console.WriteLine("( 0 ) Sair         ");
 
+ Console.ResetColor();
 }
