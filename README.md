@@ -17,7 +17,7 @@ Este programa foi criado como projeto final da disciplina de Desenvolvedor C#. O
 ```
 ### Como sair do programa?
 ```
-- Para sai do programa, vá para o menu inicial e selecione a opção (0).
+- Para sair do programa, vá para o menu inicial e selecione a opção (0).
 ```
 
 
